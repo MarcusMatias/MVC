@@ -47,6 +47,7 @@ public class IndexController {
             return "cadastroInvalido"; 
             } else{
             return "cadastroRealizado";
+            
             }
         }
 
@@ -70,7 +71,7 @@ public class IndexController {
         return "index";
     }
 
-        @GetMapping("/atualizar/{id}")
+    @GetMapping("/atualizar/{id}")
     public String atualizar(@PathVariable ("id") int id, Model model){
         UsuarioService us = context.getBean(UsuarioService.class);
         Map<String,Object> usuario = us.obterUsuario(id).get(0);
