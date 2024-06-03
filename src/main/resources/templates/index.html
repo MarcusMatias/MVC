@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Conversor de Moedas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <header>
+        <a id='logo' th:href="@{/}">
+            <p>Conversor de Moedas</p>
+        </a>
+    </header>
+    <nav>
+        <ul><a id='Cadastre' th:href="@{/cadastrar}">Cadastre-se.</a></ul>
+        <ul><a id='Entre' th:href="@{/entrar}">Entre.</a></ul>
+    </nav>
+    <div id='slogan'>
+        <p>Seja bem-vindo(a) ao conversor de moedas.</p>
+        <p>Aqui você tem o dinheiro do mundo todo, na sua mão.</p>
+    </div>
+    <form th:action="@{/converter}" method="post">
+        <p>Converta a moeda que deseja:</p>
+        
+        <div id="Valor">
+            <label for="valor">Valor:</label>
+            <input type="number" step="0.01" name="valor" id="valor" required>
+        </div>
+
+        <div id="MoedaOrigem">
+            <label for="moedaOrigem">De:</label>
+            <select name="moedaOrigem" id="moedaOrigem">
+                <option value="USD">USD</option>
+                <option value="BRL">BRL</option>
+                <option value="BTC">BTC</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+
+        <div id="MoedaDestino">
+            <label for="moedaDestino">Para:</label>
+            <select name="moedaDestino" id="moedaDestino">
+                <option value="USD">USD</option>
+                <option value="BRL">BRL</option>
+                <option value="BTC">BTC</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+
+        <button type="submit">Converter</button>
+    </form>
+
+    <div id="Resultado" th:if="${resultado}">
+        <h2>Resultado: <span th:text="${resultado}"></span></h2>
+    </div>
+
+    <a th:href="@{/usuario}">Gerenciar Usuário</a>
+</body>
+</html>

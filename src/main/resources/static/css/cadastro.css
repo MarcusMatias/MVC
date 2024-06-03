@@ -1,0 +1,127 @@
+body{
+    background-color: #EDEDED;
+    /* background-image:url("/img/bodyimg.jpg"); */
+    margin: 0;
+}
+
+header{
+    padding: 1em;
+    text-align: center;
+    background-image:url("/img/headerimg.jpg");
+    background-size:cover;
+    letter-spacing: 2px;
+    margin: 0;
+    filter: drop-shadow(0px 2px 12px black);
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+header a p{
+    color: whitesmoke;
+    font-family: "Playfair Display", serif;
+    font-weight: 472;
+    font-size: 370%;
+    font-style: normal;
+    filter: drop-shadow(10px 10px 5px #000000);
+}
+
+#MoedaOrigem{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#MoedaDestino{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#Valor label{
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #444434;
+}
+
+#Valor input{
+    background-color: #d6d6d6;
+    width: 83%;
+    border-radius: 6px;
+    height: 1.7em;
+    border: none;
+    text-align: center;
+}
+
+#MoedaOrigem label{
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #444434;
+}
+
+#MoedaOrigem select{
+    background-color: #d6d6d6;
+    width: 84%;
+    border-radius: 6px;
+    height: 1.7em;
+    border: none;
+    text-align: center;
+}
+
+#MoedaDestino label{
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #444434;
+}
+
+form input{
+    background-color: #d6d6d6;
+    width: 20%;
+    border-radius: 6px;
+    height: 1.7em;
+    border: none;
+    text-align: center;
+}
+
+form label{
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 106%;
+    letter-spacing: 3px;
+    color: #444434;
+}
+
+#button{
+    margin-top: 10px;
+    border: none;
+    background-color: #444434;
+    color: white;
+    border-radius: 10px;
+    height: 3em;
+    filter: drop-shadow(0px 3px 1px #00000056);
+    cursor: pointer;
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-size: 100%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin: 2em;
+}

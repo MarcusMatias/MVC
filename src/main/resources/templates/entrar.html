@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Cadastro de funcionario</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/entrar.css">
+</head>
+<body>
+	<header>
+        <a id='logo' th:href="@{/}">
+            <p>Conversor de Moedas</p>
+        </a>
+    </header>
+    <form action="#" th:action="@{/entrar}" method=post th:object="${usuario}">
+    	<label>Nome de usuário:</label> <input type="text" th:field="*{nome}">
+    	<label>Senha:</label> <input type="text" th:field="*{senha}">
+    	<input id="button" type="submit" value="Entrar">
+    </form>
+</body>
+</html>

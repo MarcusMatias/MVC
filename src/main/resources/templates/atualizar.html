@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Atualizacao de cliente</title>
+</head>
+<body>
+    <form action="#" th:action="@{'/atualizar/'+ ${id}}" method=post th:object="${usuario}">
+    	Nome: <input type="text" th:field="*{nome}"><br>
+    	Senha: <input type="text" th:field="*{senha}">
+    	<input type="submit" value="Editar">
+    </form>
+</body>
+</html>

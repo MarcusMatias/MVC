@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Funcionarios</title>
+</head>
+<body>
+    <table>
+    	<thead>
+        	<tr>
+            	<td><b>ID</b></td>
+            	<td><b>NOME</b> </td>
+            	<td><b>SENHA</b> </td>
+        	</tr>
+    	</thead>
+    	<tbody>
+        	<tr th:each="user : ${lista}">
+            	<td th:text="${user.id}"></td>
+            	<td th:text="${user.nome}"></td>
+            	<td th:text="${user.senha}"></td>
+       		</tr>
+     	</tbody>
+    </table>
+</body>
+</html>
